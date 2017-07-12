@@ -1,0 +1,19 @@
+#contact-info {
+	font-size: .8em;
+}
+.job {
+	background-color: #e9e5dc;
+	padding: 20px;
+	margin-bottom: 30px;
+	margin-top: 30px;
+	border-radius: 2em;
+}
+.accomplishments {
+	font-size: .8em;
+}
+.accomplishments:hover{
+	background-color: blue;
+}
+ul > li {
+	background-color: yellow;
+}
