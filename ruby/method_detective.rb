@@ -4,16 +4,16 @@
 # When there's more than one suspect who could have
 # committed the crime, add additional calls to prove it.
 
-# "iNvEsTiGaTiOn".<???>
+p "iNvEsTiGaTiOn".swapcase
 # => “InVeStIgAtIoN”
 
 # "zom".<???>
 # => “zoom”
 
-# "enhance".<???>
+# "enhance".
 # => "    enhance    "
 
-# "Stop! You’re under arrest!".<???>
+p "Stop! You’re under arrest!".upcase
 # => "STOP! YOU’RE UNDER ARREST!"
 
 # "the usual".<???>
@@ -28,7 +28,7 @@
 # "The mystery of the missing first letter".<???>
 # => "he mystery of the missing first letter"
 
-# "Elementary,    my   dear        Watson!".<???>
+p "Elementary,    my   dear        Watson!".squeeze
 # => "Elementary, my dear Watson!"
 
 # "z".<???>
