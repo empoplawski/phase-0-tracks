@@ -28,7 +28,7 @@ fib(100)
 # then places them in ascending order
 # continue to loop until all numbers are sorted
 # false indicated that all values have been compared and brakes loop
-# print new array
+# print new array.
 
 def bubble_sort(array)
 	n = array.length
