@@ -85,6 +85,7 @@ end
 	santa.celebrate_birthday
 	santa.get_mad_at("Vixen")
 	#santa.gender = "female"
+
 end
 
 
