@@ -28,6 +28,9 @@ def word_checker
 	end
 end
 
+
+def game_display
+	
 dashes = wtg_index.join('')
 	p "Heres what you have so far" + dashes
 		@game_over
