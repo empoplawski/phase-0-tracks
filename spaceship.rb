@@ -3,7 +3,7 @@
 
 class Spaceship
 
-	attr_reader :max_speed, :location
+	attr_reader :max_speed, :location, :inventory
 	attr_accessor :name 
 
 	def initialize(name, max_speed)
@@ -33,20 +33,20 @@ class Spaceship
 
 		if item_weight <= 500
 			@inventory[item] = @current_location
-			p @inventory
 			true
 
 		else enable_shield
 			false
 		end
 	end
+
+	def pickup(item, location)
+		warp_to(location)
+		tractor_beam(item)
+	end
 end
 
-##disable shield
-## add item and note the location
-## re-enable shield and return true
-## if too heavy return false
-## too heavy decided by .ord
+
 
 
 
@@ -57,8 +57,15 @@ p spaceship = Spaceship.new("USS Enterprise", 200_000)
 #p spaceship.max_speed
 #p spaceship.enable_shield
 #p spaceship.disable_shield
-spaceship.warp_to("Wisconsin")
-p spaceship.tractor_beam("cow")
+#spaceship.warp_to("Wisconsin")
+#p spaceship.tractor_beam("cow")
+
+spaceship.pickup("fish", "toledo")
+spaceship.pickup("semi_truck", "iowa")
+spaceship.pickup("dog", "illinois")
+spaceship.pickup("ax", "mars")
+p spaceship.inventory
+
 
 p spaceship = Spaceship.new("HMS Andromeda", 108_277)
 #p spaceship.name
