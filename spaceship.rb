@@ -10,6 +10,7 @@ class Spaceship
 		@name = name
 		@max_speed = max_speed
 		@location = location
+		@inventory = {}
 		
 	end
 
@@ -33,7 +34,7 @@ p spaceship = Spaceship.new("USS Enterprise", 200_000)
 #p spaceship.max_speed
 #p spaceship.enable_shield
 #p spaceship.disable_shield
-spaceship.warp_to("Wisconsin")
+#spaceship.warp_to("Wisconsin")
 p spaceship = Spaceship.new("HMS Andromeda", 108_277)
 #p spaceship.name
 #spaceship.name= ("little_guy")
