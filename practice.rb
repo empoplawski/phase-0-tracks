@@ -9,6 +9,7 @@ class Newsroom
 		@budget = budget
 		@reporters = {}
 		@salaries = []
+		@salary = 0
 	end
 
 
@@ -24,15 +25,13 @@ class Newsroom
 		length_of_name = name.length
 		price = length_of_name * 10000
 		@salaries << price
-		#puts "#{name}, #{price}"
-		@salaries.to_i
 	end
 
 	def total_salaries
 		@total = @salaries.inject(:+)
 		p @total
 	end
-
+##### class issue with method \/\/\/\/\/\/
 	def has_budget?(potential_repoter)
 		#if (@budget.to_i - @total.to_i) >= salary_for(potential_repoter)
 		#	true
