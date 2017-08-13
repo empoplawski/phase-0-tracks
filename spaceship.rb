@@ -54,6 +54,11 @@ class Spaceship
 		puts
 		end
 	end
+
+	def total_weight
+		@inventory.keys.join.chars.map { |c| c.ord }.inject(:+)
+	end
+
 end
 
 
@@ -67,14 +72,15 @@ p spaceship = Spaceship.new("USS Enterprise", 200_000)
 #p spaceship.max_speed
 #p spaceship.enable_shield
 #p spaceship.disable_shield
-#spaceship.warp_to("Wisconsin")
+# spaceship.warp_to("Wisconsin")
 #p spaceship.tractor_beam("cow")
 
-spaceship.pickup("fish", "toledo")
+spaceship.pickup("cow", "toledo")
 spaceship.pickup("semi_truck", "iowa")
-spaceship.pickup("dog", "illinois")
-spaceship.pickup("ax", "mars")
+spaceship.pickup("duck", "illinois")
+spaceship.pickup("ox", "mars")
 spaceship.print_inventory
+p spaceship.total_weight
 
 
 
