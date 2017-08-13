@@ -44,6 +44,16 @@ class Spaceship
 		warp_to(location)
 		tractor_beam(item)
 	end
+
+	def print_inventory
+		puts
+		puts "In your inventory you have:"
+		puts
+		@inventory.each do |item, location|
+			puts "- A(n) #{item} from #{location}"
+		puts
+		end
+	end
 end
 
 
@@ -64,7 +74,8 @@ spaceship.pickup("fish", "toledo")
 spaceship.pickup("semi_truck", "iowa")
 spaceship.pickup("dog", "illinois")
 spaceship.pickup("ax", "mars")
-p spaceship.inventory
+spaceship.print_inventory
+
 
 
 p spaceship = Spaceship.new("HMS Andromeda", 108_277)
