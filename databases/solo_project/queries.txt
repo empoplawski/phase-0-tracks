@@ -1,0 +1,45 @@
+
+1. display infomtion
+
+sqlite> SELECT * FROM neighbors;
+1|KEARBY|115|true|1
+2|Torres|117|false|2
+3|Blocker|100|true|3
+
+2. update an item
+
+sqlite> UPDATE neighbors SET family_name="Kearby" WHERE id=1
+   ...> ;
+sqlite> SELECT * FROM neighbors;
+1|Kearby|115|true|1
+2|Torres|117|false|2
+3|Blocker|100|true|3
+
+3. show both tables using one query
+
+sqlite> SELECT * FROM neighbors, colleges;
+1|Kearby|115|true|1|1|Kansas State
+1|Kearby|115|true|1|2|Kansas
+1|Kearby|115|true|1|3|Iowa
+2|Torres|117|false|2|1|Kansas State
+2|Torres|117|false|2|2|Kansas
+2|Torres|117|false|2|3|Iowa
+3|Blocker|100|true|3|1|Kansas State
+3|Blocker|100|true|3|2|Kansas
+3|Blocker|100|true|3|3|Iowa
+
+4. display narrow selection from both tables
+
+sqlite> SELECT family_name FROM neighbors UNION SELECT college_name FROM colleges;
+Blocker
+Iowa
+Kansas
+Kansas State
+Kearby
+Torres
+
+sqlite> DELETE FROM colleges WHERE id=3
+   ...> ;
+sqlite> SELECT * FROM colleges;
+1|Kansas State
+2|Kansas
