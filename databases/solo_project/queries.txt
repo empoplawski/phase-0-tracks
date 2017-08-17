@@ -43,3 +43,21 @@ sqlite> DELETE FROM colleges WHERE id=3
 sqlite> SELECT * FROM colleges;
 1|Kansas State
 2|Kansas
+
+different joins
+
+sqlite> SELECT * FROM neighbors CROSS JOIN colleges;
+1|Kearby|115|true|1|1|Kansas State
+1|Kearby|115|true|1|2|Kansas
+1|Kearby|115|true|1|3|Iowa
+2|Torres|117|false|2|1|Kansas State
+2|Torres|117|false|2|2|Kansas
+2|Torres|117|false|2|3|Iowa
+3|Blocker|100|true|3|1|Kansas State
+3|Blocker|100|true|3|2|Kansas
+3|Blocker|100|true|3|3|Iowa
+
+sqlite> SELECT neighbors.family_name, neighbors.house_number, colleges.college_name FROM neighbors INNER JOIN colleges on neighbors.college_id = colleges.id;
+Kearby|115|Kansas State
+Torres|117|Kansas
+Blocker|100|Iowa
