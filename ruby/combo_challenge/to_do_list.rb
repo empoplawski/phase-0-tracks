@@ -91,6 +91,7 @@ while run_program == true
 
 		when "2"
 
+
 			create_task(db, task, location, importance, complete)
 
 		when "3"
